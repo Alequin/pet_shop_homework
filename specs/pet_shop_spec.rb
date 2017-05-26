@@ -1,5 +1,6 @@
-require 'minitest/autorun'
-require_relative '../pet_shop'
+require ('minitest/autorun')
+require ('minitest/rg')
+require_relative ('../pet_shop')
 
 class TestPetShop < Minitest::Test
 
@@ -120,16 +121,16 @@ class TestPetShop < Minitest::Test
     assert_equal(0, pets.count)
   end
 
-  # def test_find_pet_by_name__returns_pet
-  #   pet = find_pet_by_name(@pet_shop, "Arthur")
-  #   assert_equal("Arthur", pet[:name])
-  # end
+  def test_find_pet_by_name__returns_pet
+    pet = find_pet_by_name(@pet_shop, "Arthur")
+    assert_equal("Arthur", pet[:name])
+  end
 
   #### assert nil checks if the result is nil ####
-  # def test_find_pet_by_name__returns_nil
-  #   pet = find_pet_by_name(@pet_shop, "Fred")
-  #   assert_nil(pet)
-  # end
+  def test_find_pet_by_name__returns_nil
+    pet = find_pet_by_name(@pet_shop, "Fred")
+    assert_nil(pet)
+  end
 
   # def test_remove_pet_by_name
   #   remove_pet_by_name(@pet_shop, "Arthur")
